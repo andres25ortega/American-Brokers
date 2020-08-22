@@ -1,0 +1,205 @@
+/********************** Estilos Varios ************************/
+.colorBlanco{color: #ffffff;}
+.colorVerde{color: #334137;}
+.colorDorado{color: #cd915f;}
+.lh{ line-height: 1;}
+.textoBold{ font-weight: 800;}
+/********************** Fin Estilos Varios ********************/
+
+/********************** Estilos Banner ************************/
+.fondoBanner{
+    background-image: url("../img/ab-Bg-header.jpg");    
+    background-position: top center; 
+    height: 100%;    
+}
+.fondoCuadroVerde{
+    background-color: rgba(51, 65, 55, 0.9);
+    border-right: 2rem solid #f9a94b;
+    padding-top: 5rem;
+    padding-bottom: 5rem;  
+    position: absolute !important;
+    bottom: -10%;
+}
+.TextoBanne1{
+	font-size: 2rem;  
+}
+.TextoBanne2{
+	font-size: 8rem;
+}
+.TextoBanne3{
+	font-size: 4rem;
+}
+.fondoFormulario{
+    background-color: #d7c8a5;
+}
+.textoFormulario1{
+    font-size: 1.8rem;
+}
+.textoFormulario2{
+    font-size: 1.1rem;
+}
+input{
+    height: 2.5rem;
+    padding-left: 0.8rem;
+    border: 1px solid #d2a072;
+    color: #a0a0a0;
+}
+.textoFormulario3{
+    font-size: 0.7rem;
+}
+.botonForm{
+    background-color: #334137;
+    border: 1px solid #ad865d;
+    font-size: 2rem;
+}
+/********************** Fin Estilos Banner ********************/
+
+/******************** Estilos Seccion 2 ***********************/
+.fondoSeccion2{
+    background-image: url("../img/ab-bg-rates.jpg"); 
+    background-repeat: no-repeat;   
+    background-position: top right; 
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+.texto1Seccion2{
+    color: #cd915f;
+    font-size: 2rem;
+}
+.texto2Seccion2{
+    color: #f9a94b;
+    font-size: 3rem;
+}
+.texto3Seccion2{
+    color: #f9a94b;
+    font-size: 2rem;
+}
+/******************* Fin Estilos Seccion 2 ********************/
+
+/******************** Estilos Seccion 3 ***********************/
+.fondoSeccion3{
+    background-color: #d7c8a5;
+}
+.texto1Seccion3{
+    font-size: 3rem;
+}
+.seccion3-1{
+    position: absolute !important;
+    left: -15%;
+}
+.cuadroSeccion3{
+    border-top: 10px solid #fff;
+    border-left: 10px solid #fff;
+    border-bottom: 10px solid #fff;    
+    padding-left: 5rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    padding-right: 2rem !important;
+}
+.bordeDerecho{
+    border-left: 10px solid #fff;
+    height: 3rem;
+}
+.bordeSuperiorDerecho{
+    margin-bottom: 7rem;
+}
+.bordeInferiorDerecho{
+    margin-top: 7rem;
+}
+
+.seccion3{
+    position: absolute !important;
+    bottom: 12%;
+}
+.texto2Seccion3{
+    font-size: 1.5rem;
+}
+/******************* Fin Estilos Seccion 3 ********************/
+
+/******************** Estilos Seccion 4 ***********************/
+.seccion4{
+    padding-bottom: 10rem !important;
+}
+.seccion4absolute{
+    position: absolute !important;
+    top: -12%;
+}
+.cuadro1Seccion4{
+    background-color: #c7b299;
+    box-shadow: 0px 1px 3px #4f4f4f;
+    max-height: 11.5rem;
+}
+.cuadro2Seccion4{
+    background-color: #f9a94b;
+    box-shadow: 0px 1px 3px #4f4f4f;
+    max-height: 11.5rem;
+}
+.cuadro3Seccion4{
+    background-color: #cd915f;
+    box-shadow: 0px 1px 3px #4f4f4f;
+    max-height: 11.5rem;
+}
+.texto1Seccion4{
+    font-size: 1.1rem;
+}
+.texto2Seccion4{
+    font-size: 0.7rem;
+}
+.texto3seccion4{
+    font-size: 1rem;
+}
+/******************* Fin Estilos Seccion 4 ********************/
+
+/******************** Estilos Seccion 5 ***********************/
+.fondoSeccion5{
+    background-color: #f5f5f5;
+}
+.pbSeccion5{
+    padding-bottom: 6rem;
+}
+.texto1Seccion5{
+    font-size: 1.5rem;
+}
+.texto2Seccion5{
+    font-size: 3rem;
+}
+.cuadrosAbsolutosSeccion5{
+    position: absolute !important;
+    bottom: 12%;
+}
+.cuadroSeccion5{
+    background-color: #d7c8a5;
+    box-shadow: 0px 1px 3px #4f4f4f;
+}
+.text3Seccion5{
+    font-size: 0.8rem;
+}
+/******************* Fin Estilos Seccion 5 ********************/
+
+/******************** Estilos Footer 3 ***********************/
+footer{
+    background-color: #334137;
+}
+.bordeFooter{
+    border-top: 1px solid #cd915f;
+}
+.textoFooter1{
+    font-size: 1rem;
+}
+.textoFooter2{
+    font-size: 1.2rem;
+}
+.textoFooter3{
+    font-size: 1.1rem;
+}
+.iconosFooter{
+    width: 1rem;
+}
+.textoFooter4{
+    font-size: 0.8rem;
+}
+.footerJustificado{
+    justify-content: space-between;
+}
+/******************* Fin Estilos Footer 3 ********************/
