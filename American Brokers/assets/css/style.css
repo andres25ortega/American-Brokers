@@ -53,6 +53,8 @@ input{
     .TextoBanne1{font-size: 1.25rem;}
     .TextoBanne2{font-size: 4rem;}
     .TextoBanne3{font-size: 2.25rem;}
+    .textoFormulario1{font-size: 1.25rem;}
+    .textoFormulario2{font-size: 0.75rem;}
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     .TextoBanne1{font-size: 1.6rem;}
@@ -260,3 +262,22 @@ footer{ background-color: #334137;}
     .textoFooter2{font-size: 1rem;}}
 
 /******************* Fin Estilos Footer 3 ********************/
+
+/********************** Estilos ir Arriba *********************/
+.irArribaDiv{position: fixed !important;bottom: 25%;max-width: 4rem !important;}
+.imgIrArriba{cursor: pointer;}
+.fondoRegistrate{background-color: #cd915f;border-top-left-radius: 1rem;}
+.facebook{background-color: #3587f7;}
+.wpp{background-color: #1dc179;border-bottom-left-radius: 1rem;}
+.textoVertical{ 
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);}
+@media (max-width: 575.98px) { 
+    .imgIrArriba{width: 30px;} 
+    .irArribaDiv{max-width: 2rem !important;}}
+@media (min-width: 576px) and (max-width: 991.98px) { 
+    .imgIrArriba{width: 40px;} 
+    .irArribaDiv{max-width: 3rem !important;}}
+@media (min-width: 992px) { 
+    .imgIrArriba{width: 40px;} }
+/********************** Fin Estilos ir Arriba******************/
