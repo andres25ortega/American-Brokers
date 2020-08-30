@@ -1,31 +1,33 @@
 
 <?php
-
-//En el destino colocar el correo alque quieres que lleguen los datos del contacto de tu formulario
- $destino = "andres25ortega@gmail.com";
-
-    $nombre = $_POST["nombre"];
-
+    $nombre = $_POST['nombre'];
     $IndPais = $_POST["IndPais"];
-
     $IndCiudad = $_POST["IndCiudad"];
-
     $telefono = $_POST["telefono"];
-
-    $correo = $_POST["correo"];
-
     $ciudad = $_POST["ciudad"];
+    $mail = $_POST['correo'];
 
-    $mensaje = $_POST["mensaje"];
+    $header = 'From: ' . $mail . " \r\n";
+    $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+    $header .= "Mime-Version: 1.0 \r\n";
+    $header .= "Content-Type: text/plain";
 
-    $contenido = "Nombre: " . $nombre . "\nInd. País: " . $IndPais . "\nInd. Ciudad: " . $IndCiudad . "\nTelefono: " . $telefono . "\nCiudad: " . $ciudad . "\nCorreo: " . $correo . "\nAsunto: " . $mensaje;
+    $mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
+    $mensaje .= "Su e-mail es: " . $mail . " \r\n";
+    $mensaje .= "Su ciudad es: " . $ciudad . " \r\n";
+    $mensaje .= "Su Indicativo del país es: " . $IndPais . " \r\n";
+    $mensaje .= "Su Indicativo de ciudad es: " . $IndCiudad . " \r\n";
+    $mensaje .= "Su telefono es: " . $telefono . " \r\n";
+    $mensaje .= "Enviado el " . date('d/m/Y', time());
 
-    mail($destino, "Contacto", $contenido);
+    $para = 'andres25ortega@gmail.com';
+    $asunto = 'Mensaje de mi sitio web';
+
+    mail($para, $asunto, utf8_decode($mensaje), $header);
 
     echo'<script type="text/javascript">
     alert("Correo envíado");    
     </script>';
 
-    // header("Location: A_Donde_Lo_Quieras_Redireccionar");
-//Esto es opcional, aqui pueden colocar un mensaje de "enviado correctamente" o redireccionarlo a algun lugar
+    header("Location:index.html");
 ?>

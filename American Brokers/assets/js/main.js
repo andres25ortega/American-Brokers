@@ -20,6 +20,6 @@ imgIrArriba.addEventListener('click', () => {
 // swal();
 
 // let botonEnviar = document.getElementById('enviarForm');
-// botonEnviar.addEventListener('submit', () =>{
+// botonEnviar.addEventListener('click', () =>{
 //     swal("Hello world!");
 // })
