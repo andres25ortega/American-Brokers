@@ -1,4 +1,9 @@
 /********************** Estilos Varios ************************/
+@font-face{
+    font-family: Seravek;
+    font-display: auto;
+    src:url("../fonts/Seravek.otf");}
+.fuente{font-family: Seravek;}
 .colorBlanco{color: #ffffff;}
 .colorVerde{color: #334137;}
 .colorDorado{color: #cd915f;}
@@ -271,10 +276,15 @@ footer{ background-color: #334137;}
 .wpp{background-color: #1dc179;border-bottom-left-radius: 1rem;}
 .textoVertical{ 
     writing-mode: vertical-lr; 
-    transform: rotate(180deg);}
+    transform: rotate(180deg);
+    font-size: 1.25rem;}
+.iconoVertical{
+    writing-mode: vertical-lr; 
+    transform: rotate(-90deg);}
 @media (max-width: 575.98px) { 
     .imgIrArriba{width: 30px;} 
-    .irArribaDiv{max-width: 2rem !important;}}
+    .irArribaDiv{max-width: 2rem !important;}
+    .textoVertical{font-size: 0.8rem;}}
 @media (min-width: 576px) and (max-width: 991.98px) { 
     .imgIrArriba{width: 40px;} 
     .irArribaDiv{max-width: 3rem !important;}}

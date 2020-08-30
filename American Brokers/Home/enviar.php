@@ -22,6 +22,10 @@
 
     mail($destino, "Contacto", $contenido);
 
+    echo'<script type="text/javascript">
+    alert("Correo envíado");    
+    </script>';
+
     // header("Location: A_Donde_Lo_Quieras_Redireccionar");
 //Esto es opcional, aqui pueden colocar un mensaje de "enviado correctamente" o redireccionarlo a algun lugar
 ?>
