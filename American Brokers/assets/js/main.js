@@ -17,9 +17,9 @@ imgIrArriba.addEventListener('click', () => {
     })
 })
 
-// swal();
 
-// let botonEnviar = document.getElementById('enviarForm');
-// botonEnviar.addEventListener('click', () =>{
-//     swal("Hello world!");
-// })
+let formulario = document.getElementById('contactform');
+formulario.addEventListener('submit', (e) =>{
+    swal("Correo enviado!", "EXITOSAMENTE", "success");    
+})
+

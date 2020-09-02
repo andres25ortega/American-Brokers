@@ -1,33 +1,49 @@
-
 <?php
     $nombre = $_POST['nombre'];
     $IndPais = $_POST["IndPais"];
     $IndCiudad = $_POST["IndCiudad"];
     $telefono = $_POST["telefono"];
     $ciudad = $_POST["ciudad"];
-    $mail = $_POST['correo'];
+    $correo = $_POST['correo'];
 
-    $header = 'From: ' . $mail . " \r\n";
-    $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-    $header .= "Mime-Version: 1.0 \r\n";
-    $header .= "Content-Type: text/plain";
+    $body = "Nombre: " . $nombre . "<br>Indicativo Pais: " . $IndPais . "<br>Indicativo Ciudad: " . $IndCiudad . "<br>Telefono: " . $telefono . "<br>Ciudad: " . $ciudad . "<br>Correo: " . $correo;
 
-    $mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-    $mensaje .= "Su e-mail es: " . $mail . " \r\n";
-    $mensaje .= "Su ciudad es: " . $ciudad . " \r\n";
-    $mensaje .= "Su Indicativo del país es: " . $IndPais . " \r\n";
-    $mensaje .= "Su Indicativo de ciudad es: " . $IndCiudad . " \r\n";
-    $mensaje .= "Su telefono es: " . $telefono . " \r\n";
-    $mensaje .= "Enviado el " . date('d/m/Y', time());
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
 
-    $para = 'andres25ortega@gmail.com';
-    $asunto = 'Mensaje de mi sitio web';
+    require '../assets/phpMailer/Exception.php';
+    require '../assets/phpMailer/PHPMailer.php';
+    require '../assets/phpMailer/SMTP.php';
 
-    mail($para, $asunto, utf8_decode($mensaje), $header);
+    $mail = new PHPMailer(true);
 
-    echo'<script type="text/javascript">
-    alert("Correo envíado");    
-    </script>';
+    try {
+        //Server settings
+        $mail->SMTPDebug = 0;                      // Enable verbose debug output
+        $mail->isSMTP();                                            // Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+        $mail->Username   = 'WebAmerianBrokers@gmail.com';                     // SMTP username
+        $mail->Password   = 'AmerianBrokers2020';                               // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
+        //Recipients
+        $mail->setFrom('WebAmerianBrokers@gmail.com', $nombre);
+        $mail->addAddress('WebAmerianBrokers@gmail.com', 'American Brokers');     // Add a recipient
+
+        // Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Mensaje envíado desde la pagina web American Brokers';
+        $mail->CharSet = 'UTF-8';
+        $mail->Body    = $body;
+
+        $mail->send();
+        
+    } catch (Exception $e) {
+        echo "Hubo un error: {$mail->ErrorInfo}";
+    }
     header("Location:index.html");
+
+
 ?>
